@@ -720,19 +720,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dengt\\.nuget\\packages\\": {}
+    "C:\\Users\\Дарина\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dengt\\source\\repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj",
+      "projectUniqueName": "C:\\Users\\Дарина\\source\\repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj",
       "projectName": "ToDay",
-      "projectPath": "C:\\Users\\dengt\\source\\repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj",
-      "packagesPath": "C:\\Users\\dengt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dengt\\source\\repos\\maliiinka\\ToDay\\ToDay\\obj\\",
+      "projectPath": "C:\\Users\\Дарина\\source\\repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj",
+      "packagesPath": "C:\\Users\\Дарина\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Дарина\\source\\repos\\maliiinka\\ToDay\\ToDay\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\dengt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Дарина\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -740,6 +745,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

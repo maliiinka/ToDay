@@ -100,3 +100,6 @@ C:\Users\dengt\source\repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\ref\T
 C:\Users\dengt\source\repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.Form2.resources
 C:\Users\dengt\source\repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.Form3.resources
 C:\Users\dengt\source\repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.Properties.Resources.resources
+C:\Users\Дарина\source\repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.Form2.resources
+C:\Users\Дарина\source\repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.Form3.resources
+C:\Users\Дарина\source\repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.Properties.Resources.resources
