@@ -59,6 +59,7 @@
             // 
             // NotesDataGridView
             // 
+            NotesDataGridView.BackgroundColor = Color.Thistle;
             NotesDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             NotesDataGridView.Location = new Point(22, 210);
             NotesDataGridView.Name = "NotesDataGridView";
@@ -68,13 +69,15 @@
             // 
             // CreateNewNoteButton
             // 
+            CreateNewNoteButton.BackColor = Color.FromArgb(192, 255, 192);
+            CreateNewNoteButton.FlatStyle = FlatStyle.Popup;
             CreateNewNoteButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             CreateNewNoteButton.Location = new Point(100, 645);
             CreateNewNoteButton.Name = "CreateNewNoteButton";
             CreateNewNoteButton.Size = new Size(230, 33);
             CreateNewNoteButton.TabIndex = 3;
             CreateNewNoteButton.Text = "Создать заметку";
-            CreateNewNoteButton.UseVisualStyleBackColor = true;
+            CreateNewNoteButton.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -88,17 +91,20 @@
             // 
             // ViewCompletedNotesButton
             // 
+            ViewCompletedNotesButton.BackColor = Color.RosyBrown;
+            ViewCompletedNotesButton.FlatStyle = FlatStyle.Popup;
             ViewCompletedNotesButton.Location = new Point(228, 584);
             ViewCompletedNotesButton.Name = "ViewCompletedNotesButton";
             ViewCompletedNotesButton.Size = new Size(173, 23);
             ViewCompletedNotesButton.TabIndex = 5;
             ViewCompletedNotesButton.Text = "просмотреть завершённые";
-            ViewCompletedNotesButton.UseVisualStyleBackColor = true;
+            ViewCompletedNotesButton.UseVisualStyleBackColor = false;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(424, 699);
             Controls.Add(ViewCompletedNotesButton);
             Controls.Add(label1);

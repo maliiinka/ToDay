@@ -163,6 +163,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.BackColor = Color.Thistle;
             comboBox1.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Час", "Неделю", "Месяц" });
@@ -174,7 +175,7 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(255, 128, 255);
+            button2.BackColor = Color.Plum;
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button2.Location = new Point(37, 626);
@@ -186,7 +187,7 @@
             // 
             // button3
             // 
-            button3.BackColor = Color.FromArgb(255, 128, 128);
+            button3.BackColor = Color.RosyBrown;
             button3.BackgroundImageLayout = ImageLayout.None;
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
