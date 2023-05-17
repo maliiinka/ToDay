@@ -58,10 +58,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Consolas", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(117, 134);
             label2.Name = "label2";
-            label2.Size = new Size(199, 25);
+            label2.Size = new Size(190, 22);
             label2.TabIndex = 6;
             label2.Text = "Добавление заметки";
             // 
@@ -96,25 +96,26 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Font = new Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label5.Location = new Point(45, 247);
             label5.Name = "label5";
-            label5.Size = new Size(44, 20);
+            label5.Size = new Size(48, 18);
             label5.TabIndex = 5;
             label5.Text = "Дата:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Font = new Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(95, 96);
             label4.Name = "label4";
-            label4.Size = new Size(171, 21);
+            label4.Size = new Size(176, 18);
             label4.TabIndex = 4;
             label4.Text = "Введите текст заметки";
             // 
             // monthCalendar1
             // 
+            monthCalendar1.BackColor = Color.Thistle;
             monthCalendar1.Location = new Point(185, 244);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 7;
@@ -123,6 +124,7 @@
             // 
             // textBox2
             // 
+            textBox2.BackColor = Color.Thistle;
             textBox2.BorderStyle = BorderStyle.FixedSingle;
             textBox2.Location = new Point(3, 120);
             textBox2.Multiline = true;
@@ -132,6 +134,7 @@
             // 
             // textBox1
             // 
+            textBox1.BackColor = Color.Thistle;
             textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.Location = new Point(152, 37);
             textBox1.Name = "textBox1";
@@ -141,52 +144,58 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(3, 37);
             label3.Name = "label3";
-            label3.Size = new Size(143, 20);
+            label3.Size = new Size(152, 18);
             label3.TabIndex = 0;
             label3.Text = "Введите заголовок:";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Font = new Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label6.Location = new Point(24, 314);
             label6.Name = "label6";
-            label6.Size = new Size(115, 20);
+            label6.Size = new Size(120, 18);
             label6.TabIndex = 7;
             label6.Text = "Напомнить за: ";
             // 
             // comboBox1
             // 
+            comboBox1.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Час", "Неделю", "Месяц" });
             comboBox1.Location = new Point(145, 315);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
+            comboBox1.Size = new Size(121, 21);
             comboBox1.TabIndex = 8;
             comboBox1.Text = "нет";
             // 
             // button2
             // 
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.BackColor = Color.FromArgb(255, 128, 255);
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button2.Location = new Point(37, 626);
             button2.Name = "button2";
             button2.Size = new Size(159, 39);
             button2.TabIndex = 8;
             button2.Text = "Создать";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
-            button3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.BackColor = Color.FromArgb(255, 128, 128);
+            button3.BackgroundImageLayout = ImageLayout.None;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button3.Location = new Point(306, 639);
             button3.Name = "button3";
             button3.Size = new Size(80, 26);
             button3.TabIndex = 9;
             button3.Text = "Отмена";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             // 
             // Form3
             // 
