@@ -97,3 +97,6 @@ C:\Users\dengt\source\repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\refin
 C:\Users\dengt\source\repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.pdb
 C:\Users\dengt\source\repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.genruntimeconfig.cache
 C:\Users\dengt\source\repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\ref\ToDay.dll
+C:\Users\dengt\source\repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.Form2.resources
+C:\Users\dengt\source\repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.Form3.resources
+C:\Users\dengt\source\repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.Properties.Resources.resources

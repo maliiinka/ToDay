@@ -35,7 +35,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(12, 652);
+            button1.Location = new Point(12, 634);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.Size = new Size(400, 36);
@@ -45,7 +45,6 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Image = Properties.Resources.photo_2023_02_10_14_49_53;
             pictureBox1.InitialImage = Properties.Resources.photo_2023_02_10_14_49_53;
             pictureBox1.Location = new Point(82, 123);

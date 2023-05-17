@@ -1,4 +1,4 @@
-using ToDay.Database;
+//using ToDay.Database;
 
 namespace ToDay
 {
@@ -10,13 +10,13 @@ namespace ToDay
         [STAThread]
         static void Main()
         {
-            IRepository repository = new Repository();
-            repository.ensureCreated();
+            //IRepository repository = new Repository();
+            //repository.ensureCreated();
 
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new Form3());
         }
     }
 }
