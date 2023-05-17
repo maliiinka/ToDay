@@ -1,5 +1,7 @@
-﻿namespace ToDay {
-    partial class Form3 {
+﻿namespace ToDay
+{
+    partial class Form3
+    {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -9,8 +11,10 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -22,7 +26,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             label1 = new Label();
             label2 = new Label();
             panel1 = new Panel();
@@ -37,7 +42,6 @@
             comboBox1 = new ComboBox();
             button2 = new Button();
             button3 = new Button();
-            label7 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -184,21 +188,11 @@
             button3.Text = "Отмена";
             button3.UseVisualStyleBackColor = true;
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(312, 96);
-            label7.Name = "label7";
-            label7.Size = new Size(50, 15);
-            label7.TabIndex = 10;
-            label7.Text = "Щербет";
-            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(424, 699);
-            Controls.Add(label7);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(panel1);
@@ -206,7 +200,6 @@
             Controls.Add(label1);
             Name = "Form3";
             Text = "Form3";
-            Load += Form3_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -229,6 +222,5 @@
         private Label label6;
         private Button button2;
         private Button button3;
-        private Label label7;
     }
 }
