@@ -41,6 +41,7 @@
             button1.TabIndex = 0;
             button1.Text = "Добро пожаловать";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // pictureBox1
             // 
