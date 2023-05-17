@@ -1,5 +1,7 @@
-﻿namespace ToDay {
-    partial class Form3 {
+﻿namespace ToDay
+{
+    partial class Form3
+    {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -9,8 +11,10 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -22,7 +26,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             label2 = new Label();
             button3 = new Button();
             button1 = new Button();
@@ -100,7 +105,7 @@
             // monthCalendar1
             // 
             monthCalendar1.BackColor = Color.FromArgb(192, 192, 255);
-            monthCalendar1.Location = new Point(14, 21);
+            monthCalendar1.Location = new Point(18, 18);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 7;
             monthCalendar1.TitleForeColor = Color.White;
@@ -131,9 +136,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources._1;
-            pictureBox1.Location = new Point(16, 21);
+            pictureBox1.Location = new Point(14, 21);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(162, 162);
+            pictureBox1.Size = new Size(168, 162);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
@@ -168,6 +173,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumSlateBlue;
             ClientSize = new Size(494, 234);
+            Controls.Add(monthCalendar1);
             Controls.Add(comboBox1);
             Controls.Add(label6);
             Controls.Add(button3);
@@ -176,7 +182,6 @@
             Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(label2);
-            Controls.Add(monthCalendar1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Name = "Form3";
