@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dengt\\Source\\Repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj": {}
+    "C:\\Users\\Slunya\\Source\\Repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dengt\\Source\\Repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj": {
+    "C:\\Users\\Slunya\\Source\\Repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dengt\\Source\\Repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj",
+        "projectUniqueName": "C:\\Users\\Slunya\\Source\\Repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj",
         "projectName": "ToDay",
-        "projectPath": "C:\\Users\\dengt\\Source\\Repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj",
-        "packagesPath": "C:\\Users\\dengt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dengt\\Source\\Repos\\maliiinka\\ToDay\\ToDay\\obj\\",
+        "projectPath": "C:\\Users\\Slunya\\Source\\Repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj",
+        "packagesPath": "C:\\Users\\Slunya\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Slunya\\Source\\Repos\\maliiinka\\ToDay\\ToDay\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dengt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Slunya\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -47,6 +47,10 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[6.0.8, )"
+            },
+            "WinForms.DataVisualization": {
+              "target": "Package",
+              "version": "[1.8.0, )"
             }
           },
           "imports": [
@@ -68,7 +72,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
