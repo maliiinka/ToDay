@@ -145,3 +145,42 @@ C:\Users\Slunya\Source\Repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\ToDa
 C:\Users\Дарина\source\repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.Form4.resources
 C:\Users\Дарина\source\repos\maliiinka\ToDay\ToDay\bin\Debug\net6.0-windows\WinForms.DataVisualization.Utilities.dll
 C:\Users\Дарина\source\repos\maliiinka\ToDay\ToDay\bin\Debug\net6.0-windows\WinForms.DataVisualization.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\ToDay.exe
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\ToDay.deps.json
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\ToDay.runtimeconfig.json
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\ToDay.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\ToDay.pdb
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\Npgsql.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\WinForms.DataVisualization.Utilities.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\bin\Debug\net6.0-windows\WinForms.DataVisualization.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.csproj.AssemblyReference.cache
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.Form1.resources
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.Form2.resources
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.Form3.resources
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.Form4.resources
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.Properties.Resources.resources
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.csproj.GenerateResource.cache
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.AssemblyInfoInputs.cache
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.AssemblyInfo.cs
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.csproj.CoreCompileInputs.cache
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.csproj.CopyComplete
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\refint\ToDay.dll
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.pdb
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.genruntimeconfig.cache
+C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ref\ToDay.dll

@@ -6,6 +6,11 @@ namespace ToDay.Database
     {
         public void ensureCreated();
 
+        //dev features
+        public void fillEfficiencyTable();
+        public void fillTaskTable();
+        public void fillTables();
+
         //Tasks handle
         public void addTask(Models.Task task);
         public void removeTask(Models.Task task);

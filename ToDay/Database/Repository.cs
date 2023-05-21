@@ -23,6 +23,82 @@ namespace ToDay.Database
             ApplicationContext applicationContext = new ApplicationContext();
         }
 
+        public void fillTables()
+        {
+            using (ApplicationContext applicationContext = new ApplicationContext())
+            {
+                if (applicationContext.tasks.Count() == 0 && applicationContext.efficiencies.Count() == 0)
+                {
+                    fillEfficiencyTable();
+                    fillTaskTable();
+                }
+            }
+        }
+
+        public void fillEfficiencyTable()
+        {
+            Efficiency temp;
+            Random random = new Random();
+
+            for (int i = 1; i < 8; i++)
+            {
+                temp = new Efficiency();
+                temp.completed_tasks = random.Next(5, 15);
+                temp.day = DateTime.Now.AddDays(-1 * i);
+                addEfficiency(temp);
+            }
+        }
+
+        public void fillTaskTable()
+        {
+            Models.Task temp;
+
+            temp = new Models.Task();
+            temp.name = "Зарядка и разминка";
+            temp.description = "В течение дня нужно сделать пробежку и разминку.";
+            temp.created_at = DateTime.Now.AddHours(-12);
+            temp.sheduled_for = DateTime.Now.AddHours(20);
+            temp.is_active = true;
+            temp.is_priority = true;
+            addTask(temp);
+
+            temp = new Models.Task();
+            temp.name = "Покупки";
+            temp.description = "Купить в магазине картошку и кефир.";
+            temp.created_at = DateTime.Now.AddHours(-10);
+            temp.sheduled_for = DateTime.Now.AddHours(22);
+            temp.is_active = true;
+            temp.is_priority = false;
+            addTask(temp);
+
+            temp = new Models.Task();
+            temp.name = "Посетить встречу";
+            temp.description = "Принять участие в мите с командой.";
+            temp.created_at = DateTime.Now.AddHours(-8);
+            temp.sheduled_for = DateTime.Now.AddHours(23);
+            temp.is_active = true;
+            temp.is_priority = false;
+            addTask(temp);
+
+            temp = new Models.Task();
+            temp.name = "Сходить на консультацию";
+            temp.description = "Сходить к врачу на консультацию.";
+            temp.created_at = DateTime.Now.AddHours(-6);
+            temp.sheduled_for = DateTime.Now.AddHours(24);
+            temp.is_active = true;
+            temp.is_priority = false;
+            addTask(temp);
+
+            temp = new Models.Task();
+            temp.name = "Важно";
+            temp.description = "Полить цветы.";
+            temp.created_at = DateTime.Now.AddHours(-12);
+            temp.sheduled_for = DateTime.Now.AddHours(27);
+            temp.is_active = true;
+            temp.is_priority = true;
+            addTask(temp);
+        }
+
         public List<Models.Task> getTasksByCreatedDay(DateTime createdAt)
         {
             using (ApplicationContext applicationContext = new ApplicationContext())
