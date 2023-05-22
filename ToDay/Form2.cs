@@ -114,7 +114,7 @@ namespace ToDay {
         private void CreateNewNoteButton_Click_1(object sender, EventArgs e) {
             Form3 form3 = new Form3();
             form3.ShowDialog();
-            if (form3.flag == true  && form3.name!="" && form3.about!="") {
+            if (form3.flag == true && form3.name != "" && form3.about != "") {
                 string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
                 NpgsqlConnection nc = new NpgsqlConnection(con);
                 nc.Open();
@@ -149,6 +149,32 @@ namespace ToDay {
                 nc.Close();
 
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e) {
+
+           
+                string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
+                NpgsqlConnection nc = new NpgsqlConnection(con);
+                NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"Запланирована на\"='{monthCalendar1.SelectionRange.Start}' ", nc);
+                DataSet dt = new DataSet();
+                sql_tasks.Fill(dt);
+                NotesDataGridView.DataSource = dt.Tables[0];
+                nc.Close();
+          
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e) {
+            if (monthCalendar1.Visible == true) {
+                button1.BackColor = Color.FromArgb(192, 255, 192);
+                monthCalendar1.Visible = false;
+            }
+            else {
+                monthCalendar1.Visible = true;
+                button1.BackColor = Color.FromArgb(255, 192, 192);
+            }
+
         }
     }
 }

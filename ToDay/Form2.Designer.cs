@@ -51,9 +51,6 @@
             textBox14 = new TextBox();
             comboBox4 = new ComboBox();
             dateTimePicker4 = new DateTimePicker();
-            tableLayoutPanel7 = new TableLayoutPanel();
-            tb_start_work = new DateTimePicker();
-            textBox1 = new TextBox();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
@@ -68,7 +65,6 @@
             tableLayoutPanel4.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
-            tableLayoutPanel7.SuspendLayout();
             SuspendLayout();
             // 
             // button1
@@ -83,6 +79,7 @@
             button1.Size = new Size(42, 43);
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // monthCalendar1
             // 
@@ -399,39 +396,6 @@
             dateTimePicker4.Size = new Size(58, 27);
             dateTimePicker4.TabIndex = 10;
             // 
-            // tableLayoutPanel7
-            // 
-            tableLayoutPanel7.ColumnCount = 2;
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 106F));
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 261F));
-            tableLayoutPanel7.Controls.Add(tb_start_work, 0, 0);
-            tableLayoutPanel7.Controls.Add(textBox1, 1, 0);
-            tableLayoutPanel7.Location = new Point(320, 180);
-            tableLayoutPanel7.Margin = new Padding(3, 4, 3, 4);
-            tableLayoutPanel7.Name = "tableLayoutPanel7";
-            tableLayoutPanel7.RowCount = 1;
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 36F));
-            tableLayoutPanel7.Size = new Size(367, 36);
-            tableLayoutPanel7.TabIndex = 20;
-            // 
-            // tb_start_work
-            // 
-            tb_start_work.Format = DateTimePickerFormat.Time;
-            tb_start_work.Location = new Point(3, 4);
-            tb_start_work.Margin = new Padding(3, 4, 3, 4);
-            tb_start_work.Name = "tb_start_work";
-            tb_start_work.Size = new Size(99, 27);
-            tb_start_work.TabIndex = 21;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(109, 4);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(253, 27);
-            textBox1.TabIndex = 22;
-            // 
             // button2
             // 
             button2.BackColor = Color.FromArgb(128, 128, 255);
@@ -443,6 +407,7 @@
             button2.Size = new Size(42, 43);
             button2.TabIndex = 2;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -530,7 +495,6 @@
             Controls.Add(monthCalendar1);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(tableLayoutPanel7);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(CreateNewNoteButton);
@@ -549,8 +513,6 @@
             tableLayoutPanel5.ResumeLayout(false);
             tableLayoutPanel6.ResumeLayout(false);
             tableLayoutPanel6.PerformLayout();
-            tableLayoutPanel7.ResumeLayout(false);
-            tableLayoutPanel7.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -584,10 +546,7 @@
         private TextBox textBox14;
         private ComboBox comboBox4;
         private DateTimePicker dateTimePicker4;
-        private TableLayoutPanel tableLayoutPanel7;
         private Button button2;
-        private DateTimePicker tb_start_work;
-        private TextBox textBox1;
         private Button button3;
         private Button button4;
         private Button button5;
