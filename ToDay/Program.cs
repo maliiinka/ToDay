@@ -14,11 +14,9 @@ namespace ToDay
             Repository repository = new Repository();
             repository.ensureCreated();
             //Comment this before production
-<<<<<<< HEAD
-            //repository.fillTables();
-=======
-            repository.fillTables();
->>>>>>> ecd47e6 (Дебег 1.2)
+
+            
+
 
              //To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.

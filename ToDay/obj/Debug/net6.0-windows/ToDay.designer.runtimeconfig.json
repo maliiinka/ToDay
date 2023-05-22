@@ -14,8 +14,12 @@
     "additionalProbingPaths": [
       "C:\\Users\\Дарина\\.dotnet\\store\\|arch|\\|tfm|",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "C:\\Users\\Sawtooth\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Sawtooth\\.nuget\\packages",
+=======
+      "C:\\Users\\Дарина\\.nuget\\packages",
+>>>>>>> 226139e (Приняла)
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
 =======
       "C:\\Users\\dengt\\.dotnet\\store\\|arch|\\|tfm|",
