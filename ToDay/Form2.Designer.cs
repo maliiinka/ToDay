@@ -115,6 +115,7 @@
             CreateNewNoteButton.Size = new Size(46, 53);
             CreateNewNoteButton.TabIndex = 3;
             CreateNewNoteButton.UseVisualStyleBackColor = false;
+            CreateNewNoteButton.Click += CreateNewNoteButton_Click_1;
             // 
             // label1
             // 
@@ -499,6 +500,7 @@
             button6.Size = new Size(46, 53);
             button6.TabIndex = 24;
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // Form2
             // 

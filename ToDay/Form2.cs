@@ -5,12 +5,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace ToDay {
     public partial class Form2 : Form {
@@ -52,7 +55,7 @@ namespace ToDay {
             string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
             NpgsqlConnection nc = new NpgsqlConnection(con);
             nc.Open();
-            NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"В процессе\"=true ", nc);
+            NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"Выполнена\"=false ", nc);
             DataSet dt = new DataSet();
             sql_tasks.Fill(dt);
             NotesDataGridView.DataSource = dt.Tables[0];
@@ -72,7 +75,7 @@ namespace ToDay {
                 sql_done.Fill(dt);
 
                 NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"Выполнена\"=false ", nc);
-                
+
 
                 DataSet dt_ = new DataSet();
                 sql_tasks.Fill(dt_);
@@ -94,6 +97,37 @@ namespace ToDay {
             NotesDataGridView.DataSource = dt.Tables[0];
             nc.Close();
 
+        }
+
+        private void button6_Click(object sender, EventArgs e) {
+            string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
+            NpgsqlConnection nc = new NpgsqlConnection(con);
+            nc.Open();
+            NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"Выполнена\"=false ", nc);
+            DataSet dt = new DataSet();
+            sql_tasks.Fill(dt);
+            NotesDataGridView.DataSource = dt.Tables[0];
+            nc.Close();
+
+        }
+
+        private void CreateNewNoteButton_Click_1(object sender, EventArgs e) {
+            Form3 form3 = new Form3();
+            form3.ShowDialog();
+            if (form3.flag == true) {
+                string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
+                NpgsqlConnection nc = new NpgsqlConnection(con);
+                nc.Open();
+                NpgsqlDataAdapter add_new_task = new NpgsqlDataAdapter($"INSERT INTO public.\"Task\" VALUES (\' {form3.name} \', \' {form3.about}\', \'{form3.create}\', \'{form3.done}\',false , {form3.prioritet}) ", nc);
+                DataSet dt_add = new DataSet();
+                add_new_task.Fill(dt_add);
+
+                NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"Выполнена\"=false ", nc);
+                DataSet dt = new DataSet();
+                sql_tasks.Fill(dt);
+                NotesDataGridView.DataSource = dt.Tables[0];
+                nc.Close();
+            }
         }
     }
 }
