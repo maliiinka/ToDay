@@ -55,7 +55,7 @@ namespace ToDay {
             string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
             NpgsqlConnection nc = new NpgsqlConnection(con);
             nc.Open();
-            NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"Выполнена\"=false ", nc);
+            NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"is_active\"=false ", nc);
             DataSet dt = new DataSet();
             sql_tasks.Fill(dt);
             NotesDataGridView.DataSource = dt.Tables[0];
@@ -70,11 +70,11 @@ namespace ToDay {
 
 
                 nc.Open();
-                NpgsqlDataAdapter sql_done = new NpgsqlDataAdapter($"UPDATE public.\"Task\" SET \"Выполнена\"= true WHERE public.\"Task\".\"Код задачи\"='{id}'; ", nc);
+                NpgsqlDataAdapter sql_done = new NpgsqlDataAdapter($"UPDATE public.\"Task\" SET \"is_active\"= true WHERE public.\"Task\".\"task_id\"='{id}'; ", nc);
                 DataSet dt = new DataSet();
                 sql_done.Fill(dt);
 
-                NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"Выполнена\"=false ", nc);
+                NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"is_active\"=false ", nc);
 
 
                 DataSet dt_ = new DataSet();
@@ -91,7 +91,7 @@ namespace ToDay {
             string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
             NpgsqlConnection nc = new NpgsqlConnection(con);
             nc.Open();
-            NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"Выполнена\"=true ", nc);
+            NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"is_active\"=true ", nc);
             DataSet dt = new DataSet();
             sql_tasks.Fill(dt);
             NotesDataGridView.DataSource = dt.Tables[0];
@@ -103,7 +103,7 @@ namespace ToDay {
             string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
             NpgsqlConnection nc = new NpgsqlConnection(con);
             nc.Open();
-            NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"Выполнена\"=false ", nc);
+            NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"is_active\"=false ", nc);
             DataSet dt = new DataSet();
             sql_tasks.Fill(dt);
             NotesDataGridView.DataSource = dt.Tables[0];
@@ -118,11 +118,11 @@ namespace ToDay {
                 string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
                 NpgsqlConnection nc = new NpgsqlConnection(con);
                 nc.Open();
-                NpgsqlDataAdapter add_new_task = new NpgsqlDataAdapter($"INSERT INTO public.\"Task\"  (\"Название\", \"Описание\", \"Создана\", \"Запланирована на\", \"Выполнена\", \"Приоритет\") VALUES (\' {form3.name} \', \' {form3.about}\', \'{form3.create}\', \'{form3.done}\',false , {form3.prioritet}) ", nc);
+                NpgsqlDataAdapter add_new_task = new NpgsqlDataAdapter($"INSERT INTO public.\"Task\"  (\"name\", \"description\", \"created_at\", \"shedule_for\", \"is_active\", \"is_priority\") VALUES (\' {form3.name} \', \' {form3.about}\', \'{form3.create}\', \'{form3.done}\',false , {form3.prioritet}) ", nc);
                 DataSet dt_add = new DataSet();
                 add_new_task.Fill(dt_add);
 
-                NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"Выполнена\"=false ", nc);
+                NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"is_active\"=false ", nc);
                 DataSet dt = new DataSet();
                 sql_tasks.Fill(dt);
                 NotesDataGridView.DataSource = dt.Tables[0];
@@ -137,12 +137,12 @@ namespace ToDay {
                 string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
                 NpgsqlConnection nc = new NpgsqlConnection(con);
                 nc.Open();
-                NpgsqlDataAdapter delete_task = new NpgsqlDataAdapter($" DELETE FROM \"Task\" WHERE \"Task\".\"Код задачи\"={id}", nc);
+                NpgsqlDataAdapter delete_task = new NpgsqlDataAdapter($" DELETE FROM \"Task\" WHERE \"Task\".\"task_id\"={id}", nc);
                 DataSet dt1 = new DataSet();
                 delete_task.Fill(dt1);
                 nc.Close();
 
-                NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"Выполнена\"=false ", nc);
+                NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"is_active\"=false ", nc);
                 DataSet dt = new DataSet();
                 sql_tasks.Fill(dt);
                 NotesDataGridView.DataSource = dt.Tables[0];
@@ -156,7 +156,7 @@ namespace ToDay {
            
                 string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
                 NpgsqlConnection nc = new NpgsqlConnection(con);
-                NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"Запланирована на\"='{monthCalendar1.SelectionRange.Start}' ", nc);
+                NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"sheduled_for\"='{monthCalendar1.SelectionRange.Start}' ", nc);
                 DataSet dt = new DataSet();
                 sql_tasks.Fill(dt);
                 NotesDataGridView.DataSource = dt.Tables[0];
