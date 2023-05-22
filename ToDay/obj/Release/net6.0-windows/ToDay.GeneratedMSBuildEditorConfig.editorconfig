@@ -11,10 +11,7 @@ build_property.UsingMicrosoftNETSdkWeb =
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ToDay
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\Slunya\Source\Repos\maliiinka\ToDay\ToDay\
-=======
 build_property.ProjectDir = C:\Users\dengt\source\repos\maliiinka\ToDay\ToDay\
->>>>>>> 7395a72 (Изменение графика (Form4))

@@ -1,5 +1,7 @@
-﻿namespace ToDay {
-    partial class Form2 {
+﻿namespace ToDay
+{
+    partial class Form2
+    {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -9,8 +11,10 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -22,7 +26,9 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             button1 = new Button();
             monthCalendar1 = new MonthCalendar();
@@ -57,6 +63,8 @@
             button5 = new Button();
             button6 = new Button();
             button7 = new Button();
+            timer1 = new System.Windows.Forms.Timer(components);
+            notifyIcon1 = new NotifyIcon(components);
             ((System.ComponentModel.ISupportInitialize)NotesDataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
@@ -73,18 +81,16 @@
             button1.BackgroundImage = Properties.Resources.calendar__2_;
             button1.BackgroundImageLayout = ImageLayout.Center;
             button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(240, 12);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(210, 9);
             button1.Name = "button1";
-            button1.Size = new Size(42, 43);
+            button1.Size = new Size(37, 32);
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
             // monthCalendar1
             // 
-            monthCalendar1.Location = new Point(21, -3);
-            monthCalendar1.Margin = new Padding(10, 12, 10, 12);
+            monthCalendar1.Location = new Point(18, -2);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 1;
             monthCalendar1.Visible = false;
@@ -93,12 +99,11 @@
             // 
             NotesDataGridView.BackgroundColor = Color.Thistle;
             NotesDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            NotesDataGridView.Location = new Point(-5, 221);
-            NotesDataGridView.Margin = new Padding(3, 4, 3, 4);
+            NotesDataGridView.Location = new Point(-4, 166);
             NotesDataGridView.Name = "NotesDataGridView";
             NotesDataGridView.RowHeadersWidth = 51;
             NotesDataGridView.RowTemplate.Height = 25;
-            NotesDataGridView.Size = new Size(691, 291);
+            NotesDataGridView.Size = new Size(605, 218);
             NotesDataGridView.TabIndex = 2;
             // 
             // CreateNewNoteButton
@@ -107,10 +112,9 @@
             CreateNewNoteButton.FlatStyle = FlatStyle.Popup;
             CreateNewNoteButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             CreateNewNoteButton.Image = Properties.Resources.Add1;
-            CreateNewNoteButton.Location = new Point(585, 520);
-            CreateNewNoteButton.Margin = new Padding(3, 4, 3, 4);
+            CreateNewNoteButton.Location = new Point(512, 390);
             CreateNewNoteButton.Name = "CreateNewNoteButton";
-            CreateNewNoteButton.Size = new Size(46, 53);
+            CreateNewNoteButton.Size = new Size(40, 40);
             CreateNewNoteButton.TabIndex = 3;
             CreateNewNoteButton.UseVisualStyleBackColor = false;
             CreateNewNoteButton.Click += CreateNewNoteButton_Click_1;
@@ -119,19 +123,18 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Courier New", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(323, 12);
+            label1.Location = new Point(283, 9);
             label1.Name = "label1";
-            label1.Size = new Size(381, 30);
+            label1.Size = new Size(309, 23);
             label1.TabIndex = 4;
             label1.Text = "Сегодня тот самый день!";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources._1;
-            pictureBox1.Location = new Point(-5, -3);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(-4, -2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(231, 216);
+            pictureBox1.Size = new Size(202, 162);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
@@ -165,7 +168,7 @@
             tb_owner.Items.AddRange(new object[] { "" });
             tb_owner.Location = new Point(933, 3);
             tb_owner.Name = "tb_owner";
-            tb_owner.Size = new Size(229, 28);
+            tb_owner.Size = new Size(229, 23);
             tb_owner.TabIndex = 9;
             // 
             // tb_end_work
@@ -173,7 +176,7 @@
             tb_end_work.Format = DateTimePickerFormat.Time;
             tb_end_work.Location = new Point(596, 3);
             tb_end_work.Name = "tb_end_work";
-            tb_end_work.Size = new Size(58, 27);
+            tb_end_work.Size = new Size(58, 23);
             tb_end_work.TabIndex = 10;
             // 
             // tableLayoutPanel2
@@ -205,7 +208,7 @@
             comboBox1.Items.AddRange(new object[] { "" });
             comboBox1.Location = new Point(933, 3);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(229, 28);
+            comboBox1.Size = new Size(229, 23);
             comboBox1.TabIndex = 9;
             // 
             // dateTimePicker1
@@ -213,7 +216,7 @@
             dateTimePicker1.Format = DateTimePickerFormat.Time;
             dateTimePicker1.Location = new Point(596, 3);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(58, 27);
+            dateTimePicker1.Size = new Size(58, 23);
             dateTimePicker1.TabIndex = 10;
             // 
             // tableLayoutPanel3
@@ -245,7 +248,7 @@
             comboBox2.Items.AddRange(new object[] { "" });
             comboBox2.Location = new Point(933, 3);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(229, 28);
+            comboBox2.Size = new Size(229, 23);
             comboBox2.TabIndex = 9;
             // 
             // dateTimePicker2
@@ -253,7 +256,7 @@
             dateTimePicker2.Format = DateTimePickerFormat.Time;
             dateTimePicker2.Location = new Point(596, 3);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(58, 27);
+            dateTimePicker2.Size = new Size(58, 23);
             dateTimePicker2.TabIndex = 10;
             // 
             // tableLayoutPanel4
@@ -285,7 +288,7 @@
             comboBox3.Items.AddRange(new object[] { "" });
             comboBox3.Location = new Point(933, 3);
             comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(229, 28);
+            comboBox3.Size = new Size(229, 23);
             comboBox3.TabIndex = 9;
             // 
             // dateTimePicker3
@@ -293,7 +296,7 @@
             dateTimePicker3.Format = DateTimePickerFormat.Time;
             dateTimePicker3.Location = new Point(596, 3);
             dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(58, 27);
+            dateTimePicker3.Size = new Size(58, 23);
             dateTimePicker3.TabIndex = 10;
             // 
             // tableLayoutPanel5
@@ -344,14 +347,14 @@
             // 
             textBox16.Location = new Point(495, 3);
             textBox16.Name = "textBox16";
-            textBox16.Size = new Size(46, 27);
+            textBox16.Size = new Size(46, 23);
             textBox16.TabIndex = 5;
             // 
             // textBox15
             // 
             textBox15.Location = new Point(340, 3);
             textBox15.Name = "textBox15";
-            textBox15.Size = new Size(149, 27);
+            textBox15.Size = new Size(149, 23);
             textBox15.TabIndex = 4;
             // 
             // button15
@@ -368,14 +371,14 @@
             // 
             textBox13.Location = new Point(52, 3);
             textBox13.Name = "textBox13";
-            textBox13.Size = new Size(145, 27);
+            textBox13.Size = new Size(145, 23);
             textBox13.TabIndex = 3;
             // 
             // textBox14
             // 
             textBox14.Location = new Point(203, 3);
             textBox14.Name = "textBox14";
-            textBox14.Size = new Size(131, 27);
+            textBox14.Size = new Size(131, 23);
             textBox14.TabIndex = 2;
             // 
             // comboBox4
@@ -385,7 +388,7 @@
             comboBox4.Items.AddRange(new object[] { "" });
             comboBox4.Location = new Point(933, 3);
             comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(229, 28);
+            comboBox4.Size = new Size(229, 23);
             comboBox4.TabIndex = 9;
             // 
             // dateTimePicker4
@@ -393,7 +396,7 @@
             dateTimePicker4.Format = DateTimePickerFormat.Time;
             dateTimePicker4.Location = new Point(596, 3);
             dateTimePicker4.Name = "dateTimePicker4";
-            dateTimePicker4.Size = new Size(58, 27);
+            dateTimePicker4.Size = new Size(58, 23);
             dateTimePicker4.TabIndex = 10;
             // 
             // button2
@@ -401,10 +404,9 @@
             button2.BackColor = Color.FromArgb(128, 128, 255);
             button2.FlatStyle = FlatStyle.Popup;
             button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.Location = new Point(240, 91);
-            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Location = new Point(210, 68);
             button2.Name = "button2";
-            button2.Size = new Size(42, 43);
+            button2.Size = new Size(37, 32);
             button2.TabIndex = 2;
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
@@ -416,10 +418,9 @@
             button3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.FromArgb(192, 192, 255);
             button3.Image = Properties.Resources.free_icon_checkbox_107585611;
-            button3.Location = new Point(638, 520);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(558, 390);
             button3.Name = "button3";
-            button3.Size = new Size(46, 53);
+            button3.Size = new Size(40, 40);
             button3.TabIndex = 21;
             button3.TextAlign = ContentAlignment.MiddleLeft;
             button3.UseVisualStyleBackColor = false;
@@ -432,10 +433,9 @@
             button4.FlatStyle = FlatStyle.Popup;
             button4.ForeColor = Color.Transparent;
             button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(240, 171);
-            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Location = new Point(210, 128);
             button4.Name = "button4";
-            button4.Size = new Size(42, 43);
+            button4.Size = new Size(37, 32);
             button4.TabIndex = 22;
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
@@ -446,10 +446,9 @@
             button5.FlatStyle = FlatStyle.Popup;
             button5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button5.Image = Properties.Resources.done;
-            button5.Location = new Point(472, 520);
-            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Location = new Point(413, 390);
             button5.Name = "button5";
-            button5.Size = new Size(55, 53);
+            button5.Size = new Size(48, 40);
             button5.TabIndex = 23;
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
@@ -460,10 +459,9 @@
             button6.FlatStyle = FlatStyle.Popup;
             button6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.Location = new Point(533, 520);
-            button6.Margin = new Padding(3, 4, 3, 4);
+            button6.Location = new Point(466, 390);
             button6.Name = "button6";
-            button6.Size = new Size(46, 53);
+            button6.Size = new Size(40, 40);
             button6.TabIndex = 24;
             button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
@@ -474,20 +472,29 @@
             button7.FlatStyle = FlatStyle.Popup;
             button7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button7.Image = Properties.Resources.free_icon_font_trash_3917378;
-            button7.Location = new Point(411, 520);
-            button7.Margin = new Padding(3, 4, 3, 4);
+            button7.Location = new Point(360, 390);
             button7.Name = "button7";
-            button7.Size = new Size(55, 53);
+            button7.Size = new Size(48, 40);
             button7.TabIndex = 25;
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
+            // notifyIcon1
+            // 
+            notifyIcon1.Text = "notifyIcon1";
+            notifyIcon1.Visible = true;
+            notifyIcon1.MouseDoubleClick += notifyIcon1_MouseDoubleClick;
+            // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
-            ClientSize = new Size(688, 580);
+            ClientSize = new Size(602, 435);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(button5);
@@ -500,7 +507,6 @@
             Controls.Add(CreateNewNoteButton);
             Controls.Add(NotesDataGridView);
             Controls.Add(button1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Form2";
             Text = "Form2";
             Load += Form2_Load_1;
@@ -552,5 +558,7 @@
         private Button button5;
         private Button button6;
         private Button button7;
+        private System.Windows.Forms.Timer timer1;
+        private NotifyIcon notifyIcon1;
     }
 }

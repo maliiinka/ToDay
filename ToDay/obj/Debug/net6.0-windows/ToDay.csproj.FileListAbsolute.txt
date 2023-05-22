@@ -184,3 +184,6 @@ C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\
 C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.pdb
 C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.genruntimeconfig.cache
 C:\Users\Sawtooth\Desktop\универ 4\Групповуха\ToDay\ToDay\ToDay\obj\Debug\net6.0-windows\ref\ToDay.dll
+C:\Users\dengt\source\repos\maliiinka\ToDay\ToDay\bin\Debug\net6.0-windows\WinForms.DataVisualization.Utilities.dll
+C:\Users\dengt\source\repos\maliiinka\ToDay\ToDay\bin\Debug\net6.0-windows\WinForms.DataVisualization.dll
+C:\Users\dengt\source\repos\maliiinka\ToDay\ToDay\obj\Debug\net6.0-windows\ToDay.Form4.resources

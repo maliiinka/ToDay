@@ -92,7 +92,7 @@
   <data name="button6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAAXBJREFUWEftl00rRFEch++ClbKzJgvfgC3fRUrZyFbYWtnIl5BYkKK8RchKbGzw
+        vAAADrwBlbxySQAAAXBJREFUWEftl00rRFEch++ClbKzJgvfgC3fRUrZyFbYWtnIl5BYkKK8RchKbGzw
         CWRB2eH5mfOfbnfOuW9zZha6Tz11Ok1+z9S4Q9IFg7jt1LmvaHAXX5177q4vpMfHcNSd+xKRHTd8ERO4
         kHEca+Mbn8Sp1rEjYh3f8Nb5jmtYC9/4NH46Z3QB6YgN1AfUOMBaAXnjq05fxBd2HVA0boQi7lA/Q1QO
         KDtuhCLsM1EpoOq4kRdxhKUC6o4boYhvLAzodtwIRRyjNrzEGjdCEemHVZvY40apiF6NG4URO+7CxvXC
@@ -101,4 +101,10 @@
         Q+Yu7T1uZe7MaywVMIsfPXIOUyTJLwV/1bLqPjH2AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>39, 13</value>
+  </metadata>
+  <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>126, 13</value>
+  </metadata>
 </root>

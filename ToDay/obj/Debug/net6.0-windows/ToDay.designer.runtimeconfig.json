@@ -13,8 +13,14 @@
     ],
     "additionalProbingPaths": [
       "C:\\Users\\Дарина\\.dotnet\\store\\|arch|\\|tfm|",
+<<<<<<< HEAD
+      "C:\\Users\\Sawtooth\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Sawtooth\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+=======
+      "C:\\Users\\dengt\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\dengt\\.nuget\\packages"
+>>>>>>> 06c05f8 (Добавление функции уведомлений)
     ],
     "configProperties": {
       "System.Reflection.NullabilityInfoContext.IsSupported": true,

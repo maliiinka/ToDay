@@ -1,13 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-<<<<<<< HEAD
-    "\\ToDay",
-    "\\ToDay\\Database\\Models\\Configurations"
-=======
     "\\ToDay"
->>>>>>> 7395a72 (Изменение графика (Form4))
   ],
-  "SelectedNode": "\\ToDay\\Form3.cs",
+  "SelectedNode": "\\ToDay\\Form2.cs",
   "PreviewInSolutionExplorer": false
 }

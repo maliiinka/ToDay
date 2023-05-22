@@ -701,24 +701,37 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Sawtooth\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+=======
+    "C:\\Users\\dengt\\.nuget\\packages\\": {}
+>>>>>>> 06c05f8 (Добавление функции уведомлений)
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Sawtooth\\Desktop\\универ 4\\Групповуха\\ToDay\\ToDay\\ToDay\\ToDay.csproj",
       "projectName": "ToDay",
       "projectPath": "C:\\Users\\Sawtooth\\Desktop\\универ 4\\Групповуха\\ToDay\\ToDay\\ToDay\\ToDay.csproj",
       "packagesPath": "C:\\Users\\Sawtooth\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Sawtooth\\Desktop\\универ 4\\Групповуха\\ToDay\\ToDay\\ToDay\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\dengt\\source\\repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj",
+      "projectName": "ToDay",
+      "projectPath": "C:\\Users\\dengt\\source\\repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj",
+      "packagesPath": "C:\\Users\\dengt\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dengt\\source\\repos\\maliiinka\\ToDay\\ToDay\\obj\\",
+>>>>>>> 06c05f8 (Добавление функции уведомлений)
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\Sawtooth\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
+        "C:\\Users\\dengt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 06c05f8 (Добавление функции уведомлений)
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
