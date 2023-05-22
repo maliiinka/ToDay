@@ -143,6 +143,16 @@ namespace ToDay.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap free_icon_font_trash_3917378 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-font-trash-3917378", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap photo_2023_02_10_14_49_53 {
             get {
                 object obj = ResourceManager.GetObject("photo_2023-02-10_14-49-53", resourceCulture);

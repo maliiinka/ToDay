@@ -114,11 +114,11 @@ namespace ToDay {
         private void CreateNewNoteButton_Click_1(object sender, EventArgs e) {
             Form3 form3 = new Form3();
             form3.ShowDialog();
-            if (form3.flag == true) {
+            if (form3.flag == true  && form3.name!="" && form3.about!="") {
                 string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
                 NpgsqlConnection nc = new NpgsqlConnection(con);
                 nc.Open();
-                NpgsqlDataAdapter add_new_task = new NpgsqlDataAdapter($"INSERT INTO public.\"Task\" VALUES (\' {form3.name} \', \' {form3.about}\', \'{form3.create}\', \'{form3.done}\',false , {form3.prioritet}) ", nc);
+                NpgsqlDataAdapter add_new_task = new NpgsqlDataAdapter($"INSERT INTO public.\"Task\"  (\"Название\", \"Описание\", \"Создана\", \"Запланирована на\", \"Выполнена\", \"Приоритет\") VALUES (\' {form3.name} \', \' {form3.about}\', \'{form3.create}\', \'{form3.done}\',false , {form3.prioritet}) ", nc);
                 DataSet dt_add = new DataSet();
                 add_new_task.Fill(dt_add);
 
@@ -127,6 +127,27 @@ namespace ToDay {
                 sql_tasks.Fill(dt);
                 NotesDataGridView.DataSource = dt.Tables[0];
                 nc.Close();
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e) {
+            if (NotesDataGridView.CurrentRow != null) {
+                string id = NotesDataGridView.SelectedRows[0].Cells[0].Value.ToString();
+
+                string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
+                NpgsqlConnection nc = new NpgsqlConnection(con);
+                nc.Open();
+                NpgsqlDataAdapter delete_task = new NpgsqlDataAdapter($" DELETE FROM \"Task\" WHERE \"Task\".\"Код задачи\"={id}", nc);
+                DataSet dt1 = new DataSet();
+                delete_task.Fill(dt1);
+                nc.Close();
+
+                NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"Выполнена\"=false ", nc);
+                DataSet dt = new DataSet();
+                sql_tasks.Fill(dt);
+                NotesDataGridView.DataSource = dt.Tables[0];
+                nc.Close();
+
             }
         }
     }
