@@ -57,6 +57,8 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            button5 = new Button();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)NotesDataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
@@ -454,6 +456,7 @@
             button3.TabIndex = 21;
             button3.TextAlign = ContentAlignment.MiddleLeft;
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -470,12 +473,41 @@
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(192, 192, 255);
+            button5.FlatStyle = FlatStyle.Popup;
+            button5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.Image = Properties.Resources.done;
+            button5.Location = new Point(472, 520);
+            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Name = "button5";
+            button5.Size = new Size(55, 53);
+            button5.TabIndex = 23;
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.FromArgb(192, 192, 255);
+            button6.FlatStyle = FlatStyle.Popup;
+            button6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button6.Image = (Image)resources.GetObject("button6.Image");
+            button6.Location = new Point(533, 520);
+            button6.Margin = new Padding(3, 4, 3, 4);
+            button6.Name = "button6";
+            button6.Size = new Size(46, 53);
+            button6.TabIndex = 24;
+            button6.UseVisualStyleBackColor = false;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(688, 580);
+            Controls.Add(button6);
+            Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(monthCalendar1);
             Controls.Add(button3);
@@ -540,5 +572,7 @@
         private TextBox textBox1;
         private Button button3;
         private Button button4;
+        private Button button5;
+        private Button button6;
     }
 }
