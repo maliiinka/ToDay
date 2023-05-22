@@ -113,6 +113,16 @@ namespace ToDay.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap done {
+            get {
+                object obj = ResourceManager.GetObject("done", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap free_icon_checkbox_10758561 {
             get {
                 object obj = ResourceManager.GetObject("free-icon-checkbox-10758561", resourceCulture);
@@ -126,6 +136,16 @@ namespace ToDay.Properties {
         internal static System.Drawing.Bitmap free_icon_checkbox_107585611 {
             get {
                 object obj = ResourceManager.GetObject("free-icon-checkbox-107585611", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_font_trash_3917378 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-font-trash-3917378", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

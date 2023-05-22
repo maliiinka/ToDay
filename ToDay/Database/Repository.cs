@@ -171,5 +171,13 @@ namespace ToDay.Database
                 return applicationContext.efficiencies.Where(e => e.completed_tasks == completedTasks).ToList();
             }
         }
+
+        public List<Efficiency> getEfficienciesByWeek()
+        {
+            using (ApplicationContext applicationContext = new ApplicationContext())
+            {
+                return applicationContext.efficiencies.Where(e => e.day >= DateTime.Now.AddDays(-6)).OrderByDescending(e => e.day).ToList();
+            }
+        }
     }
 }

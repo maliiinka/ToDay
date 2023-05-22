@@ -1,4 +1,5 @@
 using ToDay.Database;
+using ToDay.Database.Models;
 
 namespace ToDay
 {
@@ -13,7 +14,7 @@ namespace ToDay
             Repository repository = new Repository();
             repository.ensureCreated();
             //Comment this before production
-            repository.fillTables();
+            //repository.fillTables();
 
              //To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
