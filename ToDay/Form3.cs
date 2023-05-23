@@ -17,9 +17,24 @@ namespace ToDay {
         public bool prioritet;
         public bool flag;
 
-        public Form3() {
+        public static Color GlobalColor { get; set; }
+
+        public Form3(Color color) {
             InitializeComponent();
+            GlobalColor = color;
+            this.BackColor = GlobalColor;
+            SelectedColor();
         }
+
+        private void SelectedColor()
+        {
+            if(GlobalColor == ThemeSettings.ModerateRed)
+            {
+                radioButton1.ForeColor = Color.White;
+            }
+
+        }
+
 
         private void button1_Click(object sender, EventArgs e) {
             if (monthCalendar1.Visible == true) {

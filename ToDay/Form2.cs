@@ -17,8 +17,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace ToDay {
     public partial class Form2 : Form {
+
+        public static Color GlobalColor { get; set; }
+
         public Form2() {
             InitializeComponent();
+            SelectedColor();
         }
 
         private void button1_Click(object sender, EventArgs e) {
@@ -41,9 +45,18 @@ namespace ToDay {
         }
 
         private void CreateNewNoteButton_Click(object sender, EventArgs e) {
-            Form3 form = new Form3();
-            form.ShowDialog();
 
+            if (GlobalColor == ThemeSettings.Purple)
+            {
+                GlobalColor = Color.FromArgb(128, 128, 255); // globalcolor для form3.
+                Form3 form = new Form3(GlobalColor);
+                form.ShowDialog();
+            }
+            else
+            {
+                Form3 form = new Form3(GlobalColor);
+                form.ShowDialog();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e) {
@@ -112,7 +125,7 @@ namespace ToDay {
         }
 
         private void CreateNewNoteButton_Click_1(object sender, EventArgs e) {
-            Form3 form3 = new Form3();
+            Form3 form3 = new Form3(GlobalColor);
             form3.ShowDialog();
             if (form3.flag == true && form3.name != "" && form3.about != "") {
                 string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
@@ -175,6 +188,68 @@ namespace ToDay {
                 button1.BackColor = Color.FromArgb(255, 192, 192);
             }
 
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                this.BackColor = ThemeSettings.Purple;
+                GlobalColor = this.BackColor;
+
+                SetTheme(this, GlobalColor);
+
+                button1.BackColor = Color.FromArgb(128, 128, 255);
+                button2.BackColor = Color.FromArgb(128, 128, 255);
+                button4.BackColor = Color.FromArgb(128, 128, 255);
+                label1.ForeColor = Color.Black;
+                radioButton1.ForeColor = Color.Black;
+                radioButton2.ForeColor = Color.Black;
+
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+            {
+                this.BackColor = ThemeSettings.ModerateRed;
+                GlobalColor = this.BackColor;
+
+                SetTheme(this, GlobalColor);
+
+                button1.BackColor = Color.FromArgb(155, 45, 48);
+                button2.BackColor = Color.FromArgb(155, 45, 48);
+                button4.BackColor = Color.FromArgb(155, 45, 48);
+                label1.ForeColor = Color.White;
+                radioButton1.ForeColor = Color.White;
+                radioButton2.ForeColor = Color.White;
+
+            }
+        }
+
+        public void SetTheme(Control control, Color backColor)
+        {
+            control.BackColor = backColor;
+
+            foreach (Control childControl in control.Controls)
+            {
+                SetTheme(childControl, backColor);
+            }
+        }
+
+        private void SelectedColor()
+        {
+            Color color = this.BackColor;
+
+            if (color == ThemeSettings.Purple)
+            {
+                radioButton1.Checked = true;
+            }
+            else
+            {
+                radioButton2.Checked = true;
+            }
         }
     }
 }

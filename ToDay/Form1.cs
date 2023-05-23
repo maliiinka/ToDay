@@ -9,7 +9,10 @@ namespace ToDay {
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            Form2 form2= new Form2();
+
+            this.Hide();
+            var form2 = new Form2();
+            form2.Closed += (s, args) => this.Close();
             form2.ShowDialog();
         }
     }
