@@ -23,6 +23,7 @@ namespace ToDay.Database
         public void removeEfficiency(Efficiency efficiency);
         public Efficiency getEfficiencyById(int id);
         public List<Efficiency> getEfficienciesByDay(DateTime day);
+        public List<Efficiency> getEfficienciesByWeek();
         public List<Efficiency> getEfficienciesByCompletedTasks(int completedTasks);
     }
 }

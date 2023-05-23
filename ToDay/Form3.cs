@@ -8,18 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ToDay {
-    public partial class Form3 : Form {
-        public string name;
-        public string about;
-        public DateTime create;
-        public DateTime done;
-        public bool prioritet;
-        public bool flag;
-
-        public static Color GlobalColor { get; set; }
-
-        public Form3(Color color) {
 namespace ToDay
 {
     public partial class Form3 : Form
@@ -32,7 +20,10 @@ namespace ToDay
         public bool prioritet;
         public bool flag;
 
-        public Form3()
+        public static Color GlobalColor { get; set; }
+
+
+        public Form3(Color color)
         {
             InitializeComponent();
             GlobalColor = color;

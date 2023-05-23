@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.button1 = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -65,6 +65,8 @@
             this.button7 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.NotesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -137,114 +139,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
-            button1 = new Button();
-            monthCalendar1 = new MonthCalendar();
-            NotesDataGridView = new DataGridView();
-            CreateNewNoteButton = new Button();
-            label1 = new Label();
-            pictureBox1 = new PictureBox();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            tb_owner = new ComboBox();
-            tb_end_work = new DateTimePicker();
-            tableLayoutPanel2 = new TableLayoutPanel();
-            comboBox1 = new ComboBox();
-            dateTimePicker1 = new DateTimePicker();
-            tableLayoutPanel3 = new TableLayoutPanel();
-            comboBox2 = new ComboBox();
-            dateTimePicker2 = new DateTimePicker();
-            tableLayoutPanel4 = new TableLayoutPanel();
-            comboBox3 = new ComboBox();
-            dateTimePicker3 = new DateTimePicker();
-            tableLayoutPanel5 = new TableLayoutPanel();
-            tableLayoutPanel6 = new TableLayoutPanel();
-            textBox16 = new TextBox();
-            textBox15 = new TextBox();
-            button15 = new Button();
-            textBox13 = new TextBox();
-            textBox14 = new TextBox();
-            comboBox4 = new ComboBox();
-            dateTimePicker4 = new DateTimePicker();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            timer1 = new System.Windows.Forms.Timer(components);
-            notifyIcon1 = new NotifyIcon(components);
-            ((System.ComponentModel.ISupportInitialize)NotesDataGridView).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            tableLayoutPanel1.SuspendLayout();
-            tableLayoutPanel2.SuspendLayout();
-            tableLayoutPanel3.SuspendLayout();
-            tableLayoutPanel4.SuspendLayout();
-            tableLayoutPanel5.SuspendLayout();
-            tableLayoutPanel6.SuspendLayout();
-            SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(128, 128, 255);
-            button1.BackgroundImage = Properties.Resources.calendar__2_;
-            button1.BackgroundImageLayout = ImageLayout.Center;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(210, 9);
-            button1.Name = "button1";
-            button1.Size = new Size(37, 32);
-            button1.TabIndex = 0;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
-            // 
-            // monthCalendar1
-            // 
-            monthCalendar1.Location = new Point(18, -2);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.TabIndex = 1;
-            monthCalendar1.Visible = false;
-            // 
-            // NotesDataGridView
-            // 
-            NotesDataGridView.BackgroundColor = Color.Thistle;
-            NotesDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            NotesDataGridView.Location = new Point(-4, 166);
-            NotesDataGridView.Name = "NotesDataGridView";
-            NotesDataGridView.RowHeadersWidth = 51;
-            NotesDataGridView.RowTemplate.Height = 25;
-            NotesDataGridView.Size = new Size(605, 218);
-            NotesDataGridView.TabIndex = 2;
-            // 
-            // CreateNewNoteButton
-            // 
-            CreateNewNoteButton.BackColor = Color.FromArgb(192, 192, 255);
-            CreateNewNoteButton.FlatStyle = FlatStyle.Popup;
-            CreateNewNoteButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            CreateNewNoteButton.Image = Properties.Resources.Add1;
-            CreateNewNoteButton.Location = new Point(512, 390);
-            CreateNewNoteButton.Name = "CreateNewNoteButton";
-            CreateNewNoteButton.Size = new Size(40, 40);
-            CreateNewNoteButton.TabIndex = 3;
-            CreateNewNoteButton.UseVisualStyleBackColor = false;
-            CreateNewNoteButton.Click += CreateNewNoteButton_Click_1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Courier New", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(283, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(309, 23);
-            label1.TabIndex = 4;
-            label1.Text = "Сегодня тот самый день!";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources._1;
-            pictureBox1.Location = new Point(-4, -2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(202, 162);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 11;
-            pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -270,21 +164,22 @@
             // 
             // tb_owner
             // 
-            tb_owner.DropDownStyle = ComboBoxStyle.DropDownList;
-            tb_owner.FormattingEnabled = true;
-            tb_owner.Items.AddRange(new object[] { "" });
-            tb_owner.Location = new Point(933, 3);
-            tb_owner.Name = "tb_owner";
-            tb_owner.Size = new Size(229, 23);
-            tb_owner.TabIndex = 9;
+            this.tb_owner.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tb_owner.FormattingEnabled = true;
+            this.tb_owner.Items.AddRange(new object[] {
+            ""});
+            this.tb_owner.Location = new System.Drawing.Point(933, 3);
+            this.tb_owner.Name = "tb_owner";
+            this.tb_owner.Size = new System.Drawing.Size(229, 23);
+            this.tb_owner.TabIndex = 9;
             // 
             // tb_end_work
             // 
-            tb_end_work.Format = DateTimePickerFormat.Time;
-            tb_end_work.Location = new Point(596, 3);
-            tb_end_work.Name = "tb_end_work";
-            tb_end_work.Size = new Size(58, 23);
-            tb_end_work.TabIndex = 10;
+            this.tb_end_work.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.tb_end_work.Location = new System.Drawing.Point(596, 3);
+            this.tb_end_work.Name = "tb_end_work";
+            this.tb_end_work.Size = new System.Drawing.Size(58, 23);
+            this.tb_end_work.TabIndex = 10;
             // 
             // tableLayoutPanel2
             // 
@@ -310,21 +205,22 @@
             // 
             // comboBox1
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "" });
-            comboBox1.Location = new Point(933, 3);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(229, 23);
-            comboBox1.TabIndex = 9;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            ""});
+            this.comboBox1.Location = new System.Drawing.Point(933, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(229, 23);
+            this.comboBox1.TabIndex = 9;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Time;
-            dateTimePicker1.Location = new Point(596, 3);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(58, 23);
-            dateTimePicker1.TabIndex = 10;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(596, 3);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(58, 23);
+            this.dateTimePicker1.TabIndex = 10;
             // 
             // tableLayoutPanel3
             // 
@@ -350,21 +246,22 @@
             // 
             // comboBox2
             // 
-            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "" });
-            comboBox2.Location = new Point(933, 3);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(229, 23);
-            comboBox2.TabIndex = 9;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            ""});
+            this.comboBox2.Location = new System.Drawing.Point(933, 3);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(229, 23);
+            this.comboBox2.TabIndex = 9;
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Format = DateTimePickerFormat.Time;
-            dateTimePicker2.Location = new Point(596, 3);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(58, 23);
-            dateTimePicker2.TabIndex = 10;
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker2.Location = new System.Drawing.Point(596, 3);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(58, 23);
+            this.dateTimePicker2.TabIndex = 10;
             // 
             // tableLayoutPanel4
             // 
@@ -390,21 +287,22 @@
             // 
             // comboBox3
             // 
-            comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "" });
-            comboBox3.Location = new Point(933, 3);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(229, 23);
-            comboBox3.TabIndex = 9;
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            ""});
+            this.comboBox3.Location = new System.Drawing.Point(933, 3);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(229, 23);
+            this.comboBox3.TabIndex = 9;
             // 
             // dateTimePicker3
             // 
-            dateTimePicker3.Format = DateTimePickerFormat.Time;
-            dateTimePicker3.Location = new Point(596, 3);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(58, 23);
-            dateTimePicker3.TabIndex = 10;
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker3.Location = new System.Drawing.Point(596, 3);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(58, 23);
+            this.dateTimePicker3.TabIndex = 10;
             // 
             // tableLayoutPanel5
             // 
@@ -452,17 +350,17 @@
             // 
             // textBox16
             // 
-            textBox16.Location = new Point(495, 3);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(46, 23);
-            textBox16.TabIndex = 5;
+            this.textBox16.Location = new System.Drawing.Point(495, 3);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(46, 23);
+            this.textBox16.TabIndex = 5;
             // 
             // textBox15
             // 
-            textBox15.Location = new Point(340, 3);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(149, 23);
-            textBox15.TabIndex = 4;
+            this.textBox15.Location = new System.Drawing.Point(340, 3);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(149, 23);
+            this.textBox15.TabIndex = 4;
             // 
             // button15
             // 
@@ -493,6 +391,7 @@
             this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
+            "",
             ""});
             this.comboBox4.Location = new System.Drawing.Point(933, 3);
             this.comboBox4.Name = "comboBox4";
@@ -544,6 +443,7 @@
             this.button4.Size = new System.Drawing.Size(37, 32);
             this.button4.TabIndex = 22;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -604,125 +504,11 @@
             this.radioButton2.Text = "Moderate Red";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            textBox13.Location = new Point(52, 3);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(145, 23);
-            textBox13.TabIndex = 3;
-            // 
-            // textBox14
-            // 
-            textBox14.Location = new Point(203, 3);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(131, 23);
-            textBox14.TabIndex = 2;
-            // 
-            // comboBox4
-            // 
-            comboBox4.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Items.AddRange(new object[] { "" });
-            comboBox4.Location = new Point(933, 3);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(229, 23);
-            comboBox4.TabIndex = 9;
-            // 
-            // dateTimePicker4
-            // 
-            dateTimePicker4.Format = DateTimePickerFormat.Time;
-            dateTimePicker4.Location = new Point(596, 3);
-            dateTimePicker4.Name = "dateTimePicker4";
-            dateTimePicker4.Size = new Size(58, 23);
-            dateTimePicker4.TabIndex = 10;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(128, 128, 255);
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.Location = new Point(210, 68);
-            button2.Name = "button2";
-            button2.Size = new Size(37, 32);
-            button2.TabIndex = 2;
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.FromArgb(192, 192, 255);
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.FromArgb(192, 192, 255);
-            button3.Image = Properties.Resources.free_icon_checkbox_107585611;
-            button3.Location = new Point(558, 390);
-            button3.Name = "button3";
-            button3.Size = new Size(40, 40);
-            button3.TabIndex = 21;
-            button3.TextAlign = ContentAlignment.MiddleLeft;
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.FromArgb(128, 128, 255);
-            button4.BackgroundImageLayout = ImageLayout.Center;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.ForeColor = Color.Transparent;
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(210, 128);
-            button4.Name = "button4";
-            button4.Size = new Size(37, 32);
-            button4.TabIndex = 22;
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.FromArgb(192, 192, 255);
-            button5.FlatStyle = FlatStyle.Popup;
-            button5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.Image = Properties.Resources.done;
-            button5.Location = new Point(413, 390);
-            button5.Name = "button5";
-            button5.Size = new Size(48, 40);
-            button5.TabIndex = 23;
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.FromArgb(192, 192, 255);
-            button6.FlatStyle = FlatStyle.Popup;
-            button6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.Location = new Point(466, 390);
-            button6.Name = "button6";
-            button6.Size = new Size(40, 40);
-            button6.TabIndex = 24;
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
-            // 
-            // button7
-            // 
-            button7.BackColor = Color.FromArgb(192, 192, 255);
-            button7.FlatStyle = FlatStyle.Popup;
-            button7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button7.Image = Properties.Resources.free_icon_font_trash_3917378;
-            button7.Location = new Point(360, 390);
-            button7.Name = "button7";
-            button7.Size = new Size(48, 40);
-            button7.TabIndex = 25;
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
-            // 
-            // timer1
-            // 
-            timer1.Tick += timer1_Tick;
             // 
             // notifyIcon1
             // 
-            notifyIcon1.Text = "notifyIcon1";
-            notifyIcon1.Visible = true;
-            notifyIcon1.MouseDoubleClick += notifyIcon1_MouseDoubleClick;
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
             // 
             // Form2
             // 
@@ -758,36 +544,6 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(192, 192, 255);
-            ClientSize = new Size(602, 435);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(monthCalendar1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(pictureBox1);
-            Controls.Add(label1);
-            Controls.Add(CreateNewNoteButton);
-            Controls.Add(NotesDataGridView);
-            Controls.Add(button1);
-            Name = "Form2";
-            Text = "Form2";
-            Load += Form2_Load_1;
-            ((System.ComponentModel.ISupportInitialize)NotesDataGridView).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel2.ResumeLayout(false);
-            tableLayoutPanel3.ResumeLayout(false);
-            tableLayoutPanel4.ResumeLayout(false);
-            tableLayoutPanel5.ResumeLayout(false);
-            tableLayoutPanel6.ResumeLayout(false);
-            tableLayoutPanel6.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

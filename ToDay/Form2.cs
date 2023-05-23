@@ -53,12 +53,9 @@ namespace ToDay {
 
         private void CreateNewNoteButton_Click(object sender, EventArgs e)
         {
-            Form3 form = new Form3();
-            form.ShowDialog();
-
             if (GlobalColor == ThemeSettings.Purple)
             {
-                GlobalColor = Color.FromArgb(128, 128, 255); // globalcolor для form3.
+                GlobalColor = Color.FromArgb(128, 128, 255);
                 Form3 form = new Form3(GlobalColor);
                 form.ShowDialog();
             }
@@ -154,7 +151,7 @@ namespace ToDay {
 
         private void CreateNewNoteButton_Click_1(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            Form3 form3 = new Form3(GlobalColor);
             form3.ShowDialog();
             if (form3.flag == true && form3.name != "" && form3.about != "")
             {
@@ -199,7 +196,6 @@ namespace ToDay {
         private void button2_Click(object sender, EventArgs e)
         {
 
-
             string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
             NpgsqlConnection nc = new NpgsqlConnection(con);
             NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"shedule_for\"='{monthCalendar1.SelectionRange.Start}' ", nc);
@@ -207,17 +203,7 @@ namespace ToDay {
             sql_tasks.Fill(dt);
             NotesDataGridView.DataSource = dt.Tables[0];
             nc.Close();
-
-           
-                string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
-                NpgsqlConnection nc = new NpgsqlConnection(con);
-                NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"sheduled_for\"='{monthCalendar1.SelectionRange.Start}' ", nc);
-                DataSet dt = new DataSet();
-                sql_tasks.Fill(dt);
-                NotesDataGridView.DataSource = dt.Tables[0];
-                nc.Close();
-          
-
+         
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -273,7 +259,7 @@ namespace ToDay {
                     notifyIcon1.Visible = true;
                     notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
                     notifyIcon1.BalloonTipTitle = "Время выполнять задачу";
-                    notifyIcon1.BalloonTipText = list[i];  //---ячека заголовка заметки---;
+                    notifyIcon1.BalloonTipText = list[i];  //---ячейка заголовка заметки---;
                     notifyIcon1.ShowBalloonTip(100);
                 }
                     
@@ -284,13 +270,6 @@ namespace ToDay {
             {
                 Console.WriteLine("Произошло исключение: " + ex.Message);
             }
-
-            
-
-
-
-
-
         }
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -298,6 +277,71 @@ namespace ToDay {
 
         }
 
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            Color otherColor = Color.FromArgb(128, 128, 255); // -- цвет для отличающихся элементов
+            Color foreColor = Color.Black; // -- цвет шрифта 
 
+            if (radioButton1.Checked)
+            {
+                this.BackColor = ThemeSettings.Purple;
+                GlobalColor = this.BackColor;
+
+                SetTheme(this, GlobalColor);
+
+                button1.BackColor = otherColor;
+                button2.BackColor = otherColor;
+                button4.BackColor = otherColor;
+                label1.ForeColor = foreColor;
+                radioButton1.ForeColor = foreColor;
+                radioButton1.ForeColor = foreColor;
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            Color otherColor = Color.FromArgb(155, 45, 48); // -- цвет для отличающихся элементов
+            Color foreColor = Color.White; // -- цвет шрифта 
+
+
+            if (radioButton2.Checked)
+            {
+                this.BackColor = ThemeSettings.ModerateRed;
+                GlobalColor = this.BackColor;
+
+                SetTheme(this, GlobalColor);
+
+                button1.BackColor = otherColor;
+                button2.BackColor = otherColor;
+                button4.BackColor = otherColor;
+                label1.ForeColor = foreColor;
+                radioButton1.ForeColor = foreColor;
+                radioButton1.ForeColor = foreColor;
+            }
+        }
+
+        public void SetTheme(Control control, Color backColor)
+        {
+            control.BackColor = backColor;
+
+            foreach (Control childControl in control.Controls)
+            {
+                SetTheme(childControl, backColor);
+            }
+        }
+
+        public void SelectedColor()
+        {
+            Color color = this.BackColor;
+
+            if (color == ThemeSettings.Purple)
+            {
+                radioButton1.Checked = true;
+            }
+            else
+            {
+                radioButton2.Checked = true;
+            }
+        }
     }
 }
