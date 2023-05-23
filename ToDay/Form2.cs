@@ -203,7 +203,8 @@ namespace ToDay {
             sql_tasks.Fill(dt);
             NotesDataGridView.DataSource = dt.Tables[0];
             nc.Close();
-         
+          
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
