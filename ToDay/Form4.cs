@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using ToDay.Database;
 
 namespace ToDay
 {
@@ -17,7 +18,8 @@ namespace ToDay
         {
             InitializeComponent();
 
-
+            IRepository repository = new Repository();
+            List<Database.Models.Efficiency> efficiencies = repository.getEfficienciesByWeek();
             Series series = new Series();
             series.ChartType = SeriesChartType.Column;
             chart1.Series.Add(series);
@@ -30,16 +32,8 @@ namespace ToDay
             Random random = new Random();
             DateTime currentDate = DateTime.Today;
 
-            for (int i = 6; i >= 0; i--)
-            {
-                DateTime date = currentDate.AddDays(-i);
-                int tasksCompleted = random.Next(0, 10);
-
-                if (date <= currentDate)
-                {
-                    series.Points.AddXY(date.ToOADate(), tasksCompleted);
-                }
-            }
+            foreach (Database.Models.Efficiency efficiency in efficiencies)
+                series.Points.AddXY(efficiency.day.Value.AddDays(-1).ToOADate(), efficiency.completed_tasks);
 
             chart1.ChartAreas[0].AxisX.Interval = 1;
             chart1.ChartAreas[0].AxisX.LabelStyle.Format = "dd.MM";
