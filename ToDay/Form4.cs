@@ -50,5 +50,15 @@ namespace ToDay
             chart1.ChartAreas[0].AxisY.MinorGrid.Enabled = false;
 
         }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
