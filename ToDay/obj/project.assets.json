@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows7.0": {
+    "net7.0-windows7.0": {
       "Microsoft.EntityFrameworkCore/6.0.16": {
         "type": "package",
         "dependencies": {
@@ -318,18 +318,18 @@
       "WinForms.DataVisualization/1.8.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+          "lib/net7.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
             "related": ".pdb;.xml"
           },
-          "lib/net6.0-windows7.0/WinForms.DataVisualization.dll": {
+          "lib/net7.0-windows7.0/WinForms.DataVisualization.dll": {
             "related": ".pdb;.Utilities.pdb;.Utilities.xml;.xml"
           }
         },
         "runtime": {
-          "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+          "lib/net7.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
             "related": ".pdb;.xml"
           },
-          "lib/net6.0-windows7.0/WinForms.DataVisualization.dll": {
+          "lib/net7.0-windows7.0/WinForms.DataVisualization.dll": {
             "related": ".pdb;.Utilities.pdb;.Utilities.xml;.xml"
           }
         }
@@ -770,38 +770,44 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0-windows7.0": [
+    "net7.0-windows7.0": [
       "Microsoft.EntityFrameworkCore >= 6.0.16",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 6.0.8",
       "WinForms.DataVisualization >= 1.8.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dengt\\.nuget\\packages\\": {}
+    "C:\\Users\\Дарина\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dengt\\source\\repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj",
+      "projectUniqueName": "C:\\Users\\Дарина\\source\\repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj",
       "projectName": "ToDay",
-      "projectPath": "C:\\Users\\dengt\\source\\repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj",
-      "packagesPath": "C:\\Users\\dengt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dengt\\source\\repos\\maliiinka\\ToDay\\ToDay\\obj\\",
+      "projectPath": "C:\\Users\\Дарина\\source\\repos\\maliiinka\\ToDay\\ToDay\\ToDay.csproj",
+      "packagesPath": "C:\\Users\\Дарина\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Дарина\\source\\repos\\maliiinka\\ToDay\\ToDay\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\dengt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Дарина\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows"
+        "net7.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
+        "net7.0-windows7.0": {
+          "targetAlias": "net7.0-windows",
           "projectReferences": {}
         }
       },
@@ -812,8 +818,8 @@
       }
     },
     "frameworks": {
-      "net6.0-windows7.0": {
-        "targetAlias": "net6.0-windows",
+      "net7.0-windows7.0": {
+        "targetAlias": "net7.0-windows",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",

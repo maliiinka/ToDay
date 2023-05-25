@@ -17,49 +17,39 @@ using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
-namespace ToDay
-{
-    public partial class Form2 : Form
-    {
+namespace ToDay {
+    public partial class Form2 : Form {
 
         public static Color GlobalColor { get; set; }
 
-        public Form2()
-        {
+        public Form2() {
             InitializeComponent();
             SelectedColor();
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            if (monthCalendar1.Visible == true)
-            {
+        private void button1_Click_2(object sender, EventArgs e) {
+            if (monthCalendar1.Visible == true) {
                 button1.BackColor = Color.FromArgb(192, 255, 192);
                 monthCalendar1.Visible = false;
             }
-            else
-            {
+            else {
                 monthCalendar1.Visible = true;
                 button1.BackColor = Color.FromArgb(255, 192, 192);
             }
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e) {
 
         }
 
 
 
-        private void CreateNewNoteButton_Click(object sender, EventArgs e)
-        {
-            if (GlobalColor == ThemeSettings.Purple)
-            {
+        private void CreateNewNoteButton_Click(object sender, EventArgs e) {
+            if (GlobalColor == ThemeSettings.Purple) {
                 GlobalColor = Color.FromArgb(128, 128, 255);
                 Form3 form3 = new Form3(GlobalColor);
                 form3.ShowDialog();
-                if (form3.flag == true && form3.name != "" && form3.about != "")
-                {
+                if (form3.flag == true && form3.name != "" && form3.about != "") {
                     string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
                     NpgsqlConnection nc = new NpgsqlConnection(con);
                     nc.Open();
@@ -75,12 +65,10 @@ namespace ToDay
                 }
 
             }
-            else
-            {
+            else {
                 Form3 form3 = new Form3(GlobalColor);
                 form3.ShowDialog();
-                if (form3.flag == true && form3.name != "" && form3.about != "")
-                {
+                if (form3.flag == true && form3.name != "" && form3.about != "") {
                     string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
                     NpgsqlConnection nc = new NpgsqlConnection(con);
                     nc.Open();
@@ -99,14 +87,12 @@ namespace ToDay
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
+        private void button4_Click(object sender, EventArgs e) {
             Form4 form4 = new Form4();
             form4.ShowDialog();
         }
 
-        private void Form2_Load_1(object sender, EventArgs e)
-        {
+        private void Form2_Load_1(object sender, EventArgs e) {
             string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
             NpgsqlConnection nc = new NpgsqlConnection(con);
             nc.Open();
@@ -129,19 +115,32 @@ namespace ToDay
             timer.Start();
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            if (NotesDataGridView.SelectedRows.Count > 0)
-            {
+        private void button3_Click_1(object sender, EventArgs e) {
+            if (NotesDataGridView.SelectedRows.Count > 0) {
                 string id = NotesDataGridView.SelectedRows[0].Cells[0].Value.ToString();
                 string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
                 NpgsqlConnection nc = new NpgsqlConnection(con);
 
 
                 nc.Open();
-                NpgsqlDataAdapter sql_done = new NpgsqlDataAdapter($"UPDATE public.\"Task\" SET \"is_active\"= true WHERE public.\"Task\".\"task_id\"='{id}'; ", nc);
+                NpgsqlDataAdapter sql_done = new NpgsqlDataAdapter($"UPDATE public.\"Task\" SET \"is_active\"= true WHERE public.\"Task\".\"task_id\"={id}; ", nc);
                 DataSet dt = new DataSet();
                 sql_done.Fill(dt);
+                NpgsqlCommand sql_search_date = new NpgsqlCommand($"SELECT \"Task\".\"done_date\" FROM \"Task\" WHERE public.\"Task\".\"task_id\"='{id}'", nc);
+                string date=(sql_search_date.ExecuteScalar()).ToString();
+                try {
+                    NpgsqlDataAdapter sql_effic = new NpgsqlDataAdapter($"UPDATE public.\"Efficiency\" SET \"completed_tasks\"=\"completed_tasks\"+1  WHERE public.\"Efficiency\".\"day\"=\'{date}\'; ", nc);
+                    DataSet dt1 = new DataSet();
+                    sql_effic.Fill(dt1);
+                }
+                catch (Exception ex) {
+                    NpgsqlDataAdapter sql_new_effic = new NpgsqlDataAdapter($"INSERT INTO public.\"Efficiency\" VALUES (\'{date}\', 1; ", nc);
+
+
+                }
+
+
+
 
                 NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"is_active\"=false ", nc);
 
@@ -155,8 +154,7 @@ namespace ToDay
             }
         }
 
-        private void button5_Click_1(object sender, EventArgs e)
-        {
+        private void button5_Click_1(object sender, EventArgs e) {
 
             string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
             NpgsqlConnection nc = new NpgsqlConnection(con);
@@ -169,8 +167,7 @@ namespace ToDay
 
         }
 
-        private void button6_Click_1(object sender, EventArgs e)
-        {
+        private void button6_Click_1(object sender, EventArgs e) {
             string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
             NpgsqlConnection nc = new NpgsqlConnection(con);
             nc.Open();
@@ -182,8 +179,7 @@ namespace ToDay
 
         }
 
-        private void CreateNewNoteButton_Click_1(object sender, EventArgs e)
-        {
+        private void CreateNewNoteButton_Click_1(object sender, EventArgs e) {
             /*            Form3 form3 = new Form3(GlobalColor);
                         form3.ShowDialog();
                         if (form3.flag == true && form3.name != "" && form3.about != "")
@@ -203,8 +199,7 @@ namespace ToDay
                         }*/
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
+        private void button7_Click(object sender, EventArgs e) {
             /*if (NotesDataGridView.CurrentRow != null)
             {
                 string id = NotesDataGridView.SelectedRows[0].Cells[0].Value.ToString();
@@ -226,12 +221,11 @@ namespace ToDay
             }*/
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
+        private void button2_Click_1(object sender, EventArgs e) {
 
             string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
             NpgsqlConnection nc = new NpgsqlConnection(con);
-            NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"shedule_for\"='{monthCalendar1.SelectionRange.Start}' ", nc);
+            NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"done_date\"='{monthCalendar1.SelectionRange.Start}' ", nc);
             DataSet dt = new DataSet();
             sql_tasks.Fill(dt);
             NotesDataGridView.DataSource = dt.Tables[0];
@@ -240,15 +234,12 @@ namespace ToDay
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            if (monthCalendar1.Visible == true)
-            {
+        private void button1_Click_1(object sender, EventArgs e) {
+            if (monthCalendar1.Visible == true) {
                 button1.BackColor = Color.FromArgb(192, 255, 192);
                 monthCalendar1.Visible = false;
             }
-            else
-            {
+            else {
                 monthCalendar1.Visible = true;
                 button1.BackColor = Color.FromArgb(255, 192, 192);
             }
@@ -256,13 +247,11 @@ namespace ToDay
         }
         // Создаем таймер
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
+        private void timer1_Tick(object sender, EventArgs e) {
 
         }
         DateTime date = new DateTime(2023, 5, 22, 20, 27, 0);
-        private void OnTimerElapsed(object sender, ElapsedEventArgs e)
-        {
+        private void OnTimerElapsed(object sender, ElapsedEventArgs e) {
             string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
             NpgsqlConnection nc = new NpgsqlConnection(con);
             nc.Open();
@@ -270,16 +259,13 @@ namespace ToDay
 
             NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT \"Task\".\"name\"  FROM \"Task\" WHERE \"is_active\" = false AND \"is_priority\" = true AND \"done_time\" =\'{DateTime.Now.Hour}:{DateTime.Now.Minute}:00\' AND \"done_date\" ='{DateTime.Now.Year}.{DateTime.Now.Month}.{DateTime.Now.Day}'", nc);
 
-            try
-            {
+            try {
                 DataTable dt = new DataTable();
                 sql_tasks.Fill(dt);
 
                 List<string> list = new List<string>();
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    foreach (var item in dt.Rows[i].ItemArray)
-                    {
+                for (int i = 0; i < dt.Rows.Count; i++) {
+                    foreach (var item in dt.Rows[i].ItemArray) {
                         list.Add(item.ToString());
                     }
                 }
@@ -287,8 +273,7 @@ namespace ToDay
                 list.ToArray();
 
 
-                for (int i = 0; i < list.Count; i++)
-                {
+                for (int i = 0; i < list.Count; i++) {
                     notifyIcon1.Icon = SystemIcons.Information;
                     notifyIcon1.Visible = true;
                     notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
@@ -300,24 +285,20 @@ namespace ToDay
 
 
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 Console.WriteLine("Произошло исключение: " + ex.Message);
             }
         }
 
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e) {
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
+        private void radioButton1_CheckedChanged(object sender, EventArgs e) {
             Color otherColor = Color.FromArgb(128, 128, 255); // -- цвет для отличающихся элементов
             Color foreColor = Color.Black; // -- цвет шрифта 
 
-            if (radioButton1.Checked)
-            {
+            if (radioButton1.Checked) {
                 this.BackColor = ThemeSettings.Purple;
                 GlobalColor = this.BackColor;
 
@@ -332,14 +313,12 @@ namespace ToDay
             }
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
+        private void radioButton2_CheckedChanged(object sender, EventArgs e) {
             Color otherColor = Color.FromArgb(155, 45, 48); // -- цвет для отличающихся элементов
             Color foreColor = Color.White; // -- цвет шрифта 
 
 
-            if (radioButton2.Checked)
-            {
+            if (radioButton2.Checked) {
                 this.BackColor = ThemeSettings.ModerateRed;
                 GlobalColor = this.BackColor;
 
@@ -354,34 +333,27 @@ namespace ToDay
             }
         }
 
-        public void SetTheme(Control control, Color backColor)
-        {
+        public void SetTheme(Control control, Color backColor) {
             control.BackColor = backColor;
 
-            foreach (Control childControl in control.Controls)
-            {
+            foreach (Control childControl in control.Controls) {
                 SetTheme(childControl, backColor);
             }
         }
 
-        public void SelectedColor()
-        {
+        public void SelectedColor() {
             Color color = this.BackColor;
 
-            if (color == ThemeSettings.Purple)
-            {
+            if (color == ThemeSettings.Purple) {
                 radioButton1.Checked = true;
             }
-            else
-            {
+            else {
                 radioButton2.Checked = true;
             }
         }
 
-        private void button7_Click_1(object sender, EventArgs e)
-        {
-            if (NotesDataGridView.CurrentRow != null)
-            {
+        private void button7_Click_1(object sender, EventArgs e) {
+            if (NotesDataGridView.CurrentRow != null) {
                 string id = NotesDataGridView.SelectedRows[0].Cells[0].Value.ToString();
 
                 string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
@@ -401,15 +373,24 @@ namespace ToDay
             }
         }
 
-        private void Form2_Load_2(object sender, EventArgs e)
-        {
+        private void Form2_Load_2(object sender, EventArgs e) {
             string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
             NpgsqlConnection nc = new NpgsqlConnection(con);
             nc.Open();
-            NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT * FROM \"Task\" WHERE public.\"Task\".\"is_active\"=false ", nc);
+            NpgsqlDataAdapter sql_tasks = new NpgsqlDataAdapter($"SELECT \"Task\".\"task_id\", \"Task\".\"name\", \"Task\".\"description\", \"Task\".\"is_active\",\"Task\".\"is_priority\", \"Task\".\"done_date\",\"Task\".\"done_time\" FROM \"Task\" WHERE public.\"Task\".\"is_active\"=false ", nc);
             DataSet dt = new DataSet();
             sql_tasks.Fill(dt);
             NotesDataGridView.DataSource = dt.Tables[0];
+            NotesDataGridView.Columns[0].Width = 0;
+            NotesDataGridView.Columns[1].Width = 200;
+            NotesDataGridView.Columns[2].Width = 300;
+            NotesDataGridView.Columns[1].HeaderText = "Название";
+            NotesDataGridView.Columns[2].HeaderText = "Комментарий";
+            NotesDataGridView.Columns[3].HeaderText = "Выполнено";
+            NotesDataGridView.Columns[4].HeaderText = "Уведом.";
+            NotesDataGridView.Columns[5].HeaderText = "Дата";
+            NotesDataGridView.Columns[6].HeaderText = "Время";
+
             nc.Close();
 
             var timer = new System.Timers.Timer();
@@ -429,8 +410,7 @@ namespace ToDay
 
 
 
-        private void NotesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        private void NotesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 
         }
 
