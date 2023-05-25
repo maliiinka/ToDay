@@ -96,7 +96,7 @@
             // 
             // NotesDataGridView
             // 
-            NotesDataGridView.BackgroundColor = Color.Thistle;
+            NotesDataGridView.BackgroundColor = Color.MediumSlateBlue;
             NotesDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             NotesDataGridView.Location = new Point(-5, 221);
             NotesDataGridView.Margin = new Padding(3, 4, 3, 4);

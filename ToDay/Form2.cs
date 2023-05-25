@@ -250,8 +250,8 @@ namespace ToDay {
         private void timer1_Tick(object sender, EventArgs e) {
 
         }
-        DateTime date = new DateTime(2023, 5, 22, 20, 27, 0);
-        private void OnTimerElapsed(object sender, ElapsedEventArgs e) {
+        private void OnTimerElapsed(object sender, ElapsedEventArgs e)
+        {
             string con = "Host=localhost;Username=toDay;Password=toDay;Database=toDay";
             NpgsqlConnection nc = new NpgsqlConnection(con);
             nc.Open();
@@ -294,8 +294,9 @@ namespace ToDay {
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e) {
-            Color otherColor = Color.FromArgb(128, 128, 255); // -- цвет для отличающихся элементов
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            Color otherColor = Color.FromArgb(192, 192, 255); // -- цвет для отличающихся элементов
             Color foreColor = Color.Black; // -- цвет шрифта 
 
             if (radioButton1.Checked) {
@@ -306,6 +307,11 @@ namespace ToDay {
 
                 button1.BackColor = otherColor;
                 button2.BackColor = otherColor;
+                button3.BackColor = otherColor;
+                button5.BackColor = otherColor;
+                button6.BackColor = otherColor;
+                button7.BackColor = otherColor;
+                CreateNewNoteButton.BackColor = otherColor;
                 button4.BackColor = otherColor;
                 label1.ForeColor = foreColor;
                 radioButton1.ForeColor = foreColor;
@@ -313,8 +319,9 @@ namespace ToDay {
             }
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e) {
-            Color otherColor = Color.FromArgb(155, 45, 48); // -- цвет для отличающихся элементов
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            Color otherColor = Color.FromArgb(100, 120, 255); // -- цвет для отличающихся элементов
             Color foreColor = Color.White; // -- цвет шрифта 
 
 
@@ -326,6 +333,11 @@ namespace ToDay {
 
                 button1.BackColor = otherColor;
                 button2.BackColor = otherColor;
+                button3.BackColor = otherColor;
+                button5.BackColor = otherColor;
+                button6.BackColor = otherColor;
+                button7.BackColor = otherColor;
+                CreateNewNoteButton.BackColor = otherColor;
                 button4.BackColor = otherColor;
                 label1.ForeColor = foreColor;
                 radioButton1.ForeColor = foreColor;
